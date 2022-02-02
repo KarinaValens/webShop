@@ -1,0 +1,46 @@
+* {
+  box-sizing: border-box;
+  outline: 2px dotted red;
+}
+
+main {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  align-items: center;
+  gap: 2vw;
+}
+
+/* ----header---- */
+
+h1 {
+  text-align: center;
+}
+#nav,
+#categories,
+#contact {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  grid-column: 1/-1;
+  padding: 0%;
+  flex: 1 0 100%;
+  flex-wrap: wrap;
+}
+
+a {
+  text-decoration: none;
+}
+li {
+  list-style: none;
+}
+/* .proImg {
+  grid-column: 1 / -1;
+} */
+
+img {
+  max-width: 100%;
+}
+
+figcaption {
+  text-align: center;
+}
