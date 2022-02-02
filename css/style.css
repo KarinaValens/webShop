@@ -132,7 +132,7 @@ dd {
 
 @media screen and (min-width: 455px) {
   body {
-    font-size: 3vw;
+    font-size: 2.7vw;
   }
 
   #prodPic {
@@ -143,12 +143,25 @@ dd {
     grid-area: 1/ 2 / 1 /-1;
   }
   footer {
-    font-size: 3vw;
+    font-size: 2.8vw;
   }
 }
 
-@media screen and (min-width: 698px) {
+@media screen and (min-width: 530px) {
     
+  body {
+    font-size: 2.7vw;
+  }
+
+  h2,
+  h3 {
+    font: bold 3vw "Lato", sans-serif;
+  }
+
+  #nav a,
+  #categories li {
+    font-size: 2.5vw;
+  }
 }
 
 /* ---large tablets and laptop styles--- */
@@ -156,6 +169,17 @@ dd {
 @media screen and (min-width: 698px) {
   body {
     font-size: 2.5vw;
+  }
+
+  h2,
+  h3 {
+    font: bold 3vw "Lato", sans-serif;
+  }
+
+  #nav a,
+  #categories li,
+  #contact {
+    font-size: 2.3vw;
   }
 
   #proImg {
