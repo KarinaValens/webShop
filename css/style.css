@@ -1,3 +1,5 @@
+@import url("https://fonts.googleapis.com/css2?family=Lato&family=Montserrat:wght@400;700&display=swap");
+
 * {
   box-sizing: border-box;
   /* outline: 2px dotted red; */
@@ -5,6 +7,15 @@
 body {
   max-width: 100%;
   margin: 0%;
+  font-size: 4vw;
+}
+
+header {
+  background: rgba(0, 0, 0, 0.5) url(../images/background.jpg) no-repeat top;
+  background-size: cover;
+  background-blend-mode: overlay;
+  color: white;
+  height: 35vw;
 }
 
 main {
@@ -21,6 +32,7 @@ main {
 h1 {
   text-align: center;
 }
+
 #nav,
 #categories,
 #contact {
@@ -36,6 +48,9 @@ h1 {
 
 a {
   text-decoration: none;
+  color: white;
+  text-transform: uppercase;
+  font: bold 3vw;
 }
 li {
   list-style: none;
