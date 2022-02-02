@@ -1,9 +1,15 @@
 * {
   box-sizing: border-box;
-  outline: 2px dotted red;
+  /* outline: 2px dotted red; */
+}
+body {
+  max-width: 100%;
+  margin: 0%;
 }
 
 main {
+  max-width: 90%;
+  margin: auto;
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
   align-items: center;
@@ -21,6 +27,7 @@ h1 {
   display: flex;
   flex-direction: row;
   justify-content: space-around;
+  gap: 1vw;
   grid-column: 1/-1;
   padding: 0%;
   flex: 1 0 100%;
@@ -33,12 +40,19 @@ a {
 li {
   list-style: none;
 }
-/* .proImg {
-  grid-column: 1 / -1;
-} */
 
 img {
   max-width: 100%;
+}
+
+#proImg {
+  align-items: center;
+}
+#prodPic {
+  max-width: 20vw;
+  display: flex;
+  justify-content: space-between;
+  gap: 3vw;
 }
 
 figcaption {
