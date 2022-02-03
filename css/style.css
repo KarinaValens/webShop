@@ -2,7 +2,7 @@
 
 * {
   box-sizing: border-box;
-  outline: 2px dotted red;
+  /* outline: 2px dotted red; */
 }
 /* ---Reset--- */
 
@@ -20,6 +20,7 @@ li {
 }
 
 /* ---Base styles--- */
+
 body {
   max-width: 100%;
   font: normal 3.2vw "Montserrat", sans-serif;
@@ -147,10 +148,15 @@ dd {
   }
 }
 
-@media screen and (min-width: 530px) {
-    
+@media screen and (min-width: 698px) {
   body {
     font-size: 2.7vw;
+  }
+  header {
+    height: 30vw;
+  }
+  #categories {
+    height: 10vw;
   }
 
   h2,
@@ -168,7 +174,7 @@ dd {
 
 @media screen and (min-width: 698px) {
   body {
-    font-size: 2.5vw;
+    font-size: 2vw;
   }
 
   h2,
@@ -179,7 +185,7 @@ dd {
   #nav a,
   #categories li,
   #contact {
-    font-size: 2.3vw;
+    font-size: 2.2vw;
   }
 
   #proImg {
@@ -191,5 +197,37 @@ dd {
 }
 
 /* ---desktop styles--- */
-@media screen and (min-width: 1200px) {
+@media screen and (min-width: 900px) {
+  body {
+    font-size: 1.5vw;
+  }
+  header {
+    background-position: center;
+    height: 25vw;
+  }
+  #categories {
+    height: 7vw;
+  }
+
+  h2,
+  h3 {
+    font: bold 2vw "Lato", sans-serif;
+  }
+
+  #nav a,
+  #categories li,
+  #contact {
+    font-size: 2vw;
+  }
+
+  #cointainer {
+    max-width: 80%;
+  }
+
+  #proImg {
+    grid-column: 1 / span 3;
+  }
+  #prodInf {
+    grid-area: 1/ 4 / 1 /-1;
+  }
 }
