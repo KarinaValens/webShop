@@ -36,6 +36,7 @@ function showProduct(product) {
     const clone = template.cloneNode(true);
     // 3. Change data
     console.log(product);
+    clone.querySelector(".producType").textContent = `${product.articletype} | ${product.brandname}`;
 
     // 4. Choose the parent
     const parent = document.querySelector("main");
