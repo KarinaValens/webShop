@@ -2,9 +2,13 @@
 
 * {
   box-sizing: border-box;
-  outline: 2px dotted red;
+  /* outline: 2px dotted red; */
 }
 /* ---Reset--- */
+
+html {
+  font-size: calc(4vw + 4vh + 2vmin);
+}
 
 body,
 a,
@@ -19,7 +23,7 @@ li {
   list-style: none;
 }
 
-/* ---Base styles--- */
+/* ---mobile based styles--- */
 
 body {
   max-width: 100%;
@@ -43,10 +47,10 @@ header {
 
 #container {
   width: 90%;
-  margin: auto;
+  margin: 3vw auto;
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-  align-items: center;
+  /* align-items: center; */
   gap: 2vw;
 }
 
@@ -105,8 +109,9 @@ img {
   max-width: 100%;
 }
 
-#proImg {
+.proImg {
   align-items: center;
+  position: relative;
 }
 
 #prodPic {
@@ -122,13 +127,13 @@ figcaption {
 
 /* ---Product information--- */
 
+#prodInf {
+  align-self: center;
+}
+
 dt,
 dd {
   margin-top: 2vw;
-}
-
-.proImg {
-  position: relative;
 }
 
 article .discounted {
@@ -141,13 +146,17 @@ article.onSale .discounted {
 
 .discounted p:last-child {
   position: absolute;
-  top: 6vw;
-  left: 3vw;
-  display: inline-block;
-  width: fit-content;
-  padding: 2vw;
-  background-color: red;
+  top: 4vw;
+  left: 4vw;
+  padding: 1.4vw;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font: bolder 4vw "Loto", sans-serif;
+  background-color: #e94f64;
   color: white;
+  width: 15vw;
+  height: 15vw;
   border-radius: 50%;
 }
 
@@ -158,22 +167,20 @@ article.soldOut img {
 article.soldOut::before {
   content: "OUT OF STOCK";
   position: absolute;
-  top: 15vw;
-  left: 4vw;
+  top: 50vw;
   text-align: center;
-  padding: 0.7vw;
-  font-weight: bolder;
+  min-width: 96%;
+  padding: 2vw;
+  font: bolder 4vw "Loto", sans-serif;
   color: #e94f64;
   background-color: black;
 }
-
-/* ---mobile styles--- */
 
 /* ---small tablet styles--- */
 
 @media screen and (min-width: 455px) {
   body {
-    font-size: 2.7vw;
+    font-size: 2.5vw;
   }
 
   #prodPic {
@@ -183,6 +190,25 @@ article.soldOut::before {
   #prodInf {
     grid-area: 1/ 2 / 1 /-1;
   }
+
+  h2,
+  h3 {
+    font: bold 3vw "Lato", sans-serif;
+  }
+  .discounted p:last-child {
+    top: 0.5vw;
+    left: 2vw;
+    width: 10vw;
+    height: 10vw;
+    font-size: 2.5vw;
+  }
+
+  article.soldOut::before {
+    top: 28vw;
+    min-width: 90%;
+    font-size: 2.5vw;
+  }
+
   footer {
     font-size: 2.8vw;
   }
@@ -190,7 +216,7 @@ article.soldOut::before {
 
 @media screen and (min-width: 698px) {
   body {
-    font-size: 2.7vw;
+    font-size: 2vw;
   }
   header {
     height: 30vw;
@@ -207,6 +233,21 @@ article.soldOut::before {
   #nav a,
   #categories li {
     font-size: 2.5vw;
+  }
+
+  .discounted p:last-child {
+    top: 0;
+    left: 2vw;
+    width: 7vw;
+    height: 7vw;
+    font: bold 2vw "Lato", sans-serif;
+  }
+
+  article.soldOut::before {
+    top: 15vw;
+    padding: 1.5vw;
+    min-width: 90%;
+    font: bold 2vw "Lato", sans-serif;
   }
 }
 
@@ -243,10 +284,10 @@ article.soldOut::before {
   }
   header {
     background-position: center;
-    height: 20vw;
+    height: 15vw;
   }
   h1 {
-    margin: 4vw auto;
+    margin: 2.5vw auto;
   }
   #categories {
     height: 5vw;
@@ -274,8 +315,20 @@ article.soldOut::before {
     grid-area: 1/ 4 / 1 /-1;
   }
 
+  .discounted p:last-child {
+    width: 5vw;
+    height: 5vw;
+    font-size: 1.5vw;
+  }
+
+  article.soldOut::before {
+    width: 72%;
+    padding: 1.5vw;
+    top: 15vw;
+    font-size: 1.7vw;
+  }
+
   footer {
-    margin-top: 3vw;
     height: 5vw;
   }
 }
