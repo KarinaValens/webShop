@@ -13,18 +13,6 @@ function productL(data) {
     //console.log(data);
     // look into the product list
     data.forEach(showProduct);
-} {
-    /* <template id="myTemplate">
-                    <article class="proImg soldOut">
-                        <a href="./product.html"> <img src="../images/1163.jpg" alt="T-shirt"></a>
-                        <p>Price: <span> 1595,-</span></p>
-                        <a href="./product.html">Read More</a>
-                        <div class="discounted">
-                            <p>Now DKK 1560,-</p>
-                            <p>-34%</p>
-                        </div>
-                    </article>
-                </template> */
 }
 
 function showProduct(product) {
