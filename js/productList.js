@@ -1,4 +1,9 @@
-const url = "https://kea-alt-del.dk/t7/api/products"
+const urlParams = new URLSearchParams(window.location.search);
+// to confirm what information we are getting form the const urlParams
+//console.log(urlParams.get(`id`)); //this console log didnt work for me in the same way I got"null"
+const id = urlParams.get("id");
+
+const url = "https://kea-alt-del.dk/t7/api/products/";
 
 //Step 1: fetch the data
 fetch(url)
@@ -28,19 +33,17 @@ function showProduct(product) {
     clone.querySelector("img").alt = `https://kea-alt-del.dk/t7/images/webp/1000/${product.displayname}.webp`;
     clone.querySelector(".price").textContent = `${product.price}`;
     clone.querySelector(".discounted p:last-child").textContent = `-${product.discount}%`;
-
     // loop into the products to determind wich has discount or is sold out to add classes
     if (product.soldout) {
         clone.querySelector("article").classList.add("soldOut");
     }
     if (product.discount) {
         clone.querySelector("article").classList.add("onSale");
+        // calculating the discounted price
         clone.querySelector(".discounted p span").textContent = product.price - (product.price * (product.discount / 100));
     }
-
-    // calculating the discounted price
-
-
+    //make the product page dinamic
+    clone.querySelector("a").setAttribute("href", `product.html?id=${product.id}`);
     // 4. Choose the parent
     const parent = document.querySelector("#container");
     // 5. Append the data

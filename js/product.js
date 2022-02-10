@@ -1,4 +1,6 @@
-const url = "https://kea-alt-del.dk/t7/api/products/2801";
+const urlParams = new URLSearchParams(window.location.search);
+const id = urlParams.get("id");
+const url = "https://kea-alt-del.dk/t7/api/products/" + id;
 
 // fetch the data
 fetch(url)
@@ -8,9 +10,12 @@ fetch(url)
 //populate the page 
 function showProduct(product) {
     console.log(product);
-    document.querySelector(".categoryName").textContent = product.category;
-    //<img src="../images/1163.jpg" alt="T-shirt">
-    document.querySelector("img.productImage").src = `https://kea-alt-del.dk/t7/images/webp/1000/${product.id}.webp`;
-    document.querySelector("img.productImage").alt = `https://kea-alt-del.dk/t7/images/webp/1000/${product.displayname}.webp`;
+    document.querySelector(".categoryName").textContent = `${product.productdisplayname}`;
+    document.querySelector(".producType").textContent = `${product.articletype} | ${product.brandname}`;
+    document.querySelector(".color").textContent = `${product.basecolour}`;
+    document.querySelector(".number").textContent = `${product.id}`;
+    document.querySelector(".category").textContent = `${product.category}`;
+    document.querySelector(".productImage").src = `https://kea-alt-del.dk/t7/images/webp/1000/${product.id}.webp`;
+    document.querySelector(".productImage").alt = `https://kea-alt-del.dk/t7/images/webp/1000/${product.displayname}.webp`;
 
 }
