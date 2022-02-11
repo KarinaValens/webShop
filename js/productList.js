@@ -3,7 +3,7 @@ const urlParams = new URLSearchParams(window.location.search);
 //console.log(urlParams.get(`id`)); //this console log didnt work for me in the same way I got"null"
 const id = urlParams.get("id");
 
-const url = "https://kea-alt-del.dk/t7/api/products/";
+const url = "https://kea-alt-del.dk/t7/api/products/" + id;
 
 //Step 1: fetch the data
 fetch(url)
@@ -31,6 +31,7 @@ function showProduct(product) {
     clone.querySelector("h3").textContent = `${product.productdisplayname}`;
     clone.querySelector("img").src = `https://kea-alt-del.dk/t7/images/webp/1000/${product.id}.webp`;
     clone.querySelector("img").alt = `https://kea-alt-del.dk/t7/images/webp/1000/${product.displayname}.webp`;
+
     clone.querySelector(".price").textContent = `${product.price}`;
     clone.querySelector(".discounted p:last-child").textContent = `-${product.discount}%`;
     // loop into the products to determind wich has discount or is sold out to add classes

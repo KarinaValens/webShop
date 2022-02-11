@@ -15,7 +15,11 @@ function showProduct(product) {
     document.querySelector(".color").textContent = `${product.basecolour}`;
     document.querySelector(".number").textContent = `${product.id}`;
     document.querySelector(".category").textContent = `${product.category}`;
-    document.querySelector(".productImage").src = `https://kea-alt-del.dk/t7/images/webp/1000/${product.id}.webp`;
-    document.querySelector(".productImage").alt = `https://kea-alt-del.dk/t7/images/webp/1000/${product.displayname}.webp`;
+    //document.querySelector(".productImage").src = `https://kea-alt-del.dk/t7/images/webp/1000/${product.id}.webp`;
 
+    const imgEls = document.querySelectorAll(".productImage");
+    imgEls.forEach(element => {
+        element.src = `https://kea-alt-del.dk/t7/images/webp/1000/${product.id}.webp`;
+        element.alt = `${product.productdisplayname}`;
+    });
 }
