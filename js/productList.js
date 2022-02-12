@@ -1,4 +1,7 @@
-const url = "https://kea-alt-del.dk/t7/api/products/";
+const urlParams = new URLSearchParams(window.location.search);
+const category = urlParams.get(`category`);
+console.log(urlParams.get(`category`));
+const url = "https://kea-alt-del.dk/t7/api/products/?category=${category}";
 
 //Step 1: fetch the data
 fetch(url)
@@ -24,6 +27,7 @@ function showProduct(product) {
     console.log(product);
     clone.querySelector(".producType").textContent = `${product.articletype} | ${product.brandname}`;
     clone.querySelector("h3").textContent = `${product.productdisplayname}`;
+    clone.querySelector(".category").textContent = `${product.category}`;
     clone.querySelector("img").src = `https://kea-alt-del.dk/t7/images/webp/1000/${product.id}.webp`;
     clone.querySelector("img").alt = `https://kea-alt-del.dk/t7/images/webp/1000/${product.displayname}.webp`;
     clone.querySelector(".price").textContent = `${product.price}`;

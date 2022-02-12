@@ -1,12 +1,5 @@
-const urlParams = new URLSearchParams(window.location.search);
-//console.log(urlParams.get(`category`));
-const category = urlParams.get("category");
-const url = "https://kea-alt-del.dk/t7/api/product?category=${category}";
+const url = "https://kea-alt-del.dk/t7/api/categories";
 
-
-/* fetch(url)
-    .then((resp) => resp.json())
-    .then((data) => showCategory(data)); */
 
 fetch(url)
     .then((resp) => resp.json())
@@ -20,7 +13,11 @@ function showCategory(category) {
     // 2. Make a clone (the true stament in the clone make it include its children)
     const catClone = catTemplate.cloneNode(true);
     // 3. Change data
+    //name the categories
     catClone.querySelector(".categoryName").textContent = `${category.category}`
+    //past the link of categories 
+    catClone.querySelector(".link").setAttribute("href", `productlist.html?category=${category}`);
+
     // 4. Choose a parent
     const parent = document.querySelector("#container");
     // 5. Append the data
