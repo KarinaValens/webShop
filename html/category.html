@@ -35,14 +35,16 @@
             </ul>
         </section>
         <section id="container">
-            <figure class="proImg">
-                <a href="./productslist.html">
-                    <img class="productImage" src="../images/1163.jpg" alt="T-shirt">
-                    <figcaption class="categoryName">Accessories</figcaption>
-                </a>
-            </figure>
-
-            <figure class="proImg">
+            <template id="categoryTemplate">
+                <figure class="proImg">
+                    <a href="./productslist.html?category">
+                        <img class="productImage" src="https://kea-alt-del.dk/t7/images/webp/640/1163.webp"
+                            alt="T-shirt">
+                        <figcaption class="categoryName">Accessories</figcaption>
+                    </a>
+                </figure>
+            </template>
+            <!-- <figure class="proImg">
                 <a href="./productslist.html">
                     <img src="../images/1163.jpg" alt="T-shirt">
                     <figcaption>Apparel</figcaption>
@@ -73,7 +75,7 @@
                     <img src="../images/1163.jpg" alt="T-shirt">
                     <figcaption>Sporting Goods</figcaption>
                 </a>
-            </figure>
+            </figure> -->
         </section>
     </main>
     <footer>
@@ -83,6 +85,7 @@
             <li>Linkedin</li>
         </ul>
     </footer>
+    <script src="../js/category.js"></script>
 
 </body>
 
