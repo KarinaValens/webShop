@@ -1,7 +1,8 @@
-/* const urlParams = new URLSearchParams(window.location.search);
-const category = urlParams.get("category"); */
-const url = "https://kea-alt-del.dk/t7/api/categories";
-console.log(url);
+const urlParams = new URLSearchParams(window.location.search);
+//console.log(urlParams.get(`category`));
+const category = urlParams.get("category");
+const url = "https://kea-alt-del.dk/t7/api/product?category=${category}";
+
 
 /* fetch(url)
     .then((resp) => resp.json())

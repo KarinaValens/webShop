@@ -1,8 +1,3 @@
-const urlParams = new URLSearchParams(window.location.search);
-// to confirm what information we are getting form the const urlParams
-//console.log(urlParams.get(`id`)); //this console log didnt work for me in the same way I got"null"
-const id = urlParams.get("id");
-
 const url = "https://kea-alt-del.dk/t7/api/products/";
 
 //Step 1: fetch the data
