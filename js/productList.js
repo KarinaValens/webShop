@@ -1,7 +1,7 @@
 const urlParams = new URLSearchParams(window.location.search);
-const category = urlParams.get(`category`);
+//const category = urlParams.get(`category`);
 console.log(urlParams.get(`category`));
-const url = "https://kea-alt-del.dk/t7/api/products/?category=${category}";
+const url = `https://kea-alt-del.dk/t7/api/products/`;
 
 //Step 1: fetch the data
 fetch(url)
