@@ -1,6 +1,3 @@
-const urlParams = new URLSearchParams(window.location.search);
-//const category = urlParams.get(`category`);
-console.log(urlParams.get("category"));
 const url = "https://kea-alt-del.dk/t7/api/categories";
 
 
@@ -19,7 +16,7 @@ function showCategory(category) {
     //name the categories
     catClone.querySelector(".categoryName").textContent = `${category.category}`
     //past the link of categories 
-    catClone.querySelector(".link").setAttribute("href", `productlist.html?category=${category}`);
+    catClone.querySelector(".link").setAttribute("href", `productlist.html?category=${category.category}`);
 
     // 4. Choose a parent
     const parent = document.querySelector("#container");
