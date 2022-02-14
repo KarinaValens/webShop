@@ -4,6 +4,7 @@ const category = urlParams.get(`category`);
 
 const url = `https://kea-alt-del.dk/t7/api/products?limit=12&category=` + category;
 
+
 //Step 1: fetch the data
 fetch(url)
     .then((res) => {

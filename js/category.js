@@ -16,7 +16,11 @@ function showCategory(category) {
     //name the categories
     catClone.querySelector(".categoryName").textContent = `${category.category}`;
     //past the link of categories 
+<<<<<<< HEAD
     catClone.querySelector("a").setAttribute("href", `productlist.html?category=${category.category}`);
+=======
+    catClone.querySelector(".link").setAttribute("href", `productlist.html?category=${category.category}`);
+>>>>>>> f6a49b9d81f49976acfc6d05c3a5b82ea2c5be38
 
     // 4. Choose a parent
     const parent = document.querySelector("#container");
