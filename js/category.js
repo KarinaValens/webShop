@@ -14,9 +14,9 @@ function showCategory(category) {
     const catClone = catTemplate.cloneNode(true);
     // 3. Change data
     //name the categories
-    catClone.querySelector(".categoryName").textContent = `${category.category}`
+    catClone.querySelector(".categoryName").textContent = `${category.category}`;
     //past the link of categories 
-    catClone.querySelector(".link").setAttribute("href", `productlist.html?category=${category.category}`);
+    catClone.querySelector("a").setAttribute("href", `productlist.html?category=${category.category}`);
 
     // 4. Choose a parent
     const parent = document.querySelector("#container");
